@@ -1,0 +1,14 @@
+/* rodapé e cabeçalho */
+/* em todas as páginas */
+:root{
+    --header: #DFEBB7; /* verde mais claro */
+    --itens:
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.05);
+    text-align: center;
+
+}
+
+/* header */
