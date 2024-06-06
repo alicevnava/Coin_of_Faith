@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Controle Financeiro</h1>
+    </header>
+    <main>
+        <section id="entradas">
+            <h2>Entradas</h2>
+            <form id="nova-entrada">
+                <label for="beneficiario-entrada">Beneficiário:</label>
+                <input type="text" id="beneficiario-entrada" name="beneficiario-entrada">
+                <label for="data-entrada">Data:</label>
+                <input type="date" id="data-entrada" name="data-entrada">
+                <label for="valor-entrada">Valor:</label>
+                <input type="number" id="valor-entrada" name="valor-entrada">
+                <label for="tipo-entrada">Tipo:</label>
+                <select id="tipo-entrada" name="tipo-entrada">
+                    <option value="">Selecione</option>
+                    <option value="salario">Salário</option>
+                    <option value="investimento">Investimento</option>
+                    <option value="outro">Outro</option>
+                </select>
+                <label for="descricao-entrada">Descrição:</label>
+                <textarea id="descricao-entrada" name="descricao-entrada"></textarea>
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+        <section id="saidas">
+            <h2>Saídas</h2>
+            <form id="nova-saida">
+                <label for="beneficiario-saida">Beneficiário:</label>
+                <input type="text" id="beneficiario-saida" name="beneficiario-saida">
+                <label for="data-saida">Data:</label>
+                <input type="date" id="data-saida" name="data-saida">
+                <label for="valor-saida">Valor:</label>
+                <input type="number" id="valor-saida" name="valor-saida">
+                <label for="tipo-saida">Tipo:</label>
+                <select id="tipo-saida" name="tipo-saida">
+                    <option value="">Selecione</option>
+                    <option value="despesa">Despesa</option>
+                    <option value="imposto">Imposto</option>
+                    <option value="outro">Outro</option>
+                </select>
+                <label for="descricao-saida">Descrição:</label>
+                <textarea id="descricao-saida" name="descricao-saida"></textarea>
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+        <section id="resumo">
+            <h2>Resumo</h2>
+            <p>Saldo: <span id="saldo">R$ 0,00</span></p>
+            <p>Total Entradas: <span id="total-entradas">R$ 0,00</span></p>
+            <p>Total Saídas: <span id="total-saidas">R$ 0,00</span></p>
+        </section>
+        <section id="filtros">
+            <h2>Filtros</h2>
+            <label for="periodo">Período:</label>
+            <select id="periodo" name="periodo">
+                <option value="">Selecione</option>
+                <option value="hoje">Hoje</option>
+                <option value="semana">Semana</option>
+                <option value="mes">Mês</option>
+            </select>
+            <label for="tipo-filtro">Tipo:</label>
+            <select id="tipo-filtro" name="tipo-filtro">
+                <option value="">Selecione</option>
+                <option value="todas">Todas</option>
+                <option value="salario">Salário</option>
+                <option value="despesa">Despesa</option>
+            </select>
+        </section>
+        <section id="tabela">
+            <h2>Tabela de Entradas e Saídas</h2>
+            <table id="tabela-entradas-saidas">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Beneficiário</th>
+                        <th>Valor</th>
+                        <th>Tipo</th>

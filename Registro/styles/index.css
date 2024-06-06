@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+:root{
+    --btn: #748B75;
+    --hover: #3a5a40;
+}
+
+/* titulo */
+#title{
+    text-align: center;
+    margin-top: 55px;
+}
+
+/* botões */
+#btnRegistrar{
+    background-color: var(--btn);
+    border: var(--btn);
+    margin-top: 75px;
+    color: white;
+}
+
+#btnRegistrar:hover{
+    background-color: var(--hover);
+    border:var(--hover);
+}
+
+/* campos formulário */
+.form-control {
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+  
+.form-control:hover {
+    border-color: var(--hover)
+}
+  
+.form-control:focus {
+    border-color:var(--hover);
+    box-shadow: 0 0 0 0.25rem rgba(58, 90, 64, 0.1);
+}
