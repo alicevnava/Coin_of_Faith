@@ -65,9 +65,11 @@
     <main>
         <div id="title">
             <h2>Controle Financeiro</h2>
+        </div>    
 
         <div class="table">
-            <form class="row g-3">
+          <!-- entradas -->
+            <form class="row g-3 container-form">
                 <h3 class="titleForm">Entradas</h3>
                 <!-- beneficiários - registrar os nomes -->
                   <div class="col-md-2">
@@ -116,39 +118,40 @@
                 </div>
     
                 <!-- botão -->
-                <div class="col-2">
+                <div class="col-2 container-btn">
                   <button type="submit" class="btn btn-primary " id="btnRegistrar">Registrar Entrada</button>
                 </div>
               </form>
-
+              <!-- divisão -->
+              <hr style="margin-top: 50px;">
+            
               <!-- saídas -->
-              <div class="table">
-                <form class="row g-3">
-                    <h3 class="titleForm">Saídas</h3>
-                    <!-- beneficiários - registrar os nomes -->
-                      <div class="col-md-2">
-                        <label for="beneficiario" class="form-label">Beneficiário</label>
-                        <select id="beneficiario" class="form-select form-control" required>
-                          <option value="1">Beneficiário 1</option>
-                          <option value="2">Beneficiário 2</option>
-                          <option value="3">Beneficiário 3</option>
-                          <option value="3">Beneficiário 4</option>
-                        </select>
-                      </div>
-                   
-                    <!-- data da saída -->
-                    <div class="col-md-2">
-                      <label for="data" class="form-label">Data</label>
-                      <input type="date" class="form-control" id="date" required>
-                    </div>
-    
-                    <!-- valor da saída -->
-                    <div class="col-2">
-                      <label for="valor" class="form-label">Valor</label>
-                      <input type="number" class="form-control" id="valor" placeholder="R$" required step="0.01" pattern="[0-9]+([\.,][0-9]+)?" >
-                    </div>
-    
-                    <!-- beneficiários - registrar os nomes -->
+              <form class="row g-3 container-form">
+                <h3 class="titleForm" id="titleExit">Saídas</h3>
+                <!-- beneficiários - registrar os nomes -->
+                  <div class="col-md-2">
+                    <label for="beneficiario" class="form-label">Beneficiário</label>
+                    <select id="beneficiario" class="form-select form-control" required>
+                      <option value="1">Beneficiário 1</option>
+                      <option value="2">Beneficiário 2</option>
+                      <option value="3">Beneficiário 3</option>
+                      <option value="3">Beneficiário 4</option>
+                    </select>
+                  </div>
+               
+                <!-- data da saída -->
+                <div class="col-md-2">
+                  <label for="data" class="form-label">Data</label>
+                  <input type="date" class="form-control" id="date" required>
+                </div>
+
+                <!-- valor da saída -->
+                <div class="col-2">
+                  <label for="valor" class="form-label">Valor</label>
+                  <input type="number" class="form-control" id="valor" placeholder="R$" required placeholder="R$" required step="0.01" pattern="[0-9]+([\.,][0-9]+)?">
+                </div>
+
+                <!-- beneficiários - registrar os nomes -->
                     <div class="col-md-2">
                         <label for="tipo" class="form-label">Tipo</label>
                         <select id="tipo" class="form-select form-control" required>
@@ -159,24 +162,26 @@
                         </select>
                     </div>
 
-                    <!-- enviar documento -->
-                    <div class="col-md-2">
-                        <label for="file" class="form-label">Documento</label>
-                        <input type="file" class="form-control" id="file" placeholder="Documento">
-                      </div>
+                <!-- enviar documento -->
+                <div class="col-md-2">
+                    <label for="file" class="form-label">Documento</label>
+                    <input type="file" class="form-control" id="file" placeholder="Documento">
+                </div>    
+                
+                <!-- descrição da saída -->
+                <div class="col-md-2">
+                  <label for="descricao" class="form-label">Descrição</label>
+                  <input type="text" class="form-control" id="descricao" placeholder="Opcional">
+                </div>
+    
+                <!-- botão -->
+                <div class="col-2 container-btn">
+                  <button type="submit" class="btn btn-primary " id="btnRegistrar">Registrar Saída</button>
+                </div>
+              
+              </form>
+            </div>    
 
-                    <!-- descrição da saída -->
-                    <div class="col-md-2">
-                      <label for="descricao" class="form-label">Descrição</label>
-                      <input type="text" class="form-control" id="descricao" placeholder="Opcional">
-                    </div>
-        
-                    <!-- botão -->
-                    <div class="col-2">
-                      <button type="submit" class="btn btn-primary" id="btnRegistrar">Registrar Saída</button>
-                    </div>
-                  </form>
-        </div>
     </main>
 
 

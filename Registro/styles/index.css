@@ -19,7 +19,9 @@ main {
 /* titulo */
 #title{
     text-align: center;
-    margin-top: 55px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+
 }
 
 /* botões */
@@ -28,6 +30,9 @@ main {
     border: var(--btn);
     margin-top: 75px;
     color: white;
+    padding:10px;
+    margin-left: 50px;
+
 }
 
 #btnRegistrar:hover{
@@ -35,7 +40,28 @@ main {
     border:var(--hover);
 }
 
+.container-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#btnRegistrar {
+    margin-top: 20px;
+    padding:10px 15px
+}
+
+
+
 /* campos formulário */
+.titleForm{
+    text-align: center;
+}
+
+#titleExit{
+    margin-top: 30px;
+}
 .form-control {
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
@@ -47,4 +73,11 @@ main {
 .form-control:focus {
     border-color:var(--hover);
     box-shadow: 0 0 0 0.25rem rgba(58, 90, 64, 0.1);
+}
+
+.container-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
 }
